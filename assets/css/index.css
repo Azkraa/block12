@@ -25,9 +25,9 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1450px;
+    max-width: 1350px;
     margin: auto;
-    padding: 10px 0;
+    padding: 10px 40px;
 }
 
 h1, h2, h3 {
@@ -66,6 +66,7 @@ h1, h2, h3 {
     display: flex;
     gap: 38px;
     align-items: center;
+    margin-left: 65px;
 }
 
 .nav-links a,
@@ -132,9 +133,8 @@ h1, h2, h3 {
     color: #b80000; /* same red as active */
 }
 
-
 /* --- Hero Section --- */
-.hero-section { padding: 60px 0; }
+.hero-section { padding: 15px 0; }
 
 .hero-content {
     display: flex;
@@ -306,7 +306,7 @@ h1, h2, h3 {
 .corp-footer {
     background: #0A0A0A;
     color: #E6E6E6;
-    padding: 60px 0 20px;
+    padding: 20px 0 10px;
     font-family: "Poppins", sans-serif;
 }
 
@@ -331,6 +331,19 @@ h1, h2, h3 {
     font-size: 14px;
     color: #CFCFCF;
     max-width: 330px;
+}
+
+.corp_socials {
+    margin: 5px 0;
+    color: #a9a9a9;
+    line-height: 1.6;
+}
+
+.corp_socials a {
+    color: #a9a9a9;
+    margin-right: 5px;
+    font-size: 18px;
+    transition: 0.3s;
 }
 
 .corp-links {
