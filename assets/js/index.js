@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // --- 1. Typed Text Animation for Hero Headline ---
     const typedTextElement = document.getElementById('typed-text');
-    // Words to cycle through in the headline
     const words = [
         "Bloom in Full Color.", 
         "Shine with Bold Strategy.", 
@@ -17,59 +16,76 @@ document.addEventListener('DOMContentLoaded', () => {
         const currentWord = words[wordIndex];
         
         if (!isDeleting) {
-            // Typing logic: adds one character
             typedTextElement.textContent = currentWord.substring(0, charIndex + 1);
             charIndex++;
             
             if (charIndex === currentWord.length) {
                 isDeleting = true;
-                typingSpeed = 2000; // Pause at the end
+                typingSpeed = 2000;
             }
         } else {
-            // Deleting logic: removes one character
             typedTextElement.textContent = currentWord.substring(0, charIndex - 1);
             charIndex--;
 
             if (charIndex === 0) {
                 isDeleting = false;
-                wordIndex = (wordIndex + 1) % words.length; // Move to the next word
-                typingSpeed = 100; // Speed up typing
+                wordIndex = (wordIndex + 1) % words.length;
+                typingSpeed = 100;
             }
         }
 
         let delay = isDeleting ? 75 : typingSpeed;
-        
         setTimeout(typeEffect, delay);
     }
     
-    // Start the typing animation on load
     typeEffect();
 
 
-    // --- 2. Scroll Fade-In Animation (Intersection Observer) ---
-
+    // --- 2. Scroll Fade-In Animation ---
     const observerOptions = {
-        root: null, // relative to the viewport
+        root: null,
         rootMargin: '0px',
-        threshold: 0.15 // Trigger when 15% of the item is visible
+        threshold: 0.15
     };
 
     function handleIntersection(entries, observer) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Add the 'animated' class to trigger the CSS transition
                 entry.target.classList.add('animated');
-                // Stop observing once it's animated to save resources
                 observer.unobserve(entry.target); 
             }
         });
     }
 
     const observer = new IntersectionObserver(handleIntersection, observerOptions);
-
-    // Select all service cards and project cards for animation
     const cards = document.querySelectorAll('.service-card, .project-card');
     cards.forEach(card => {
         observer.observe(card);
     });
+
+
+    // --- 3. Mobile Menu Toggle ---
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+    
+    // === FADE IN + FADE OUT ON SCROLL ===
+    const fadeItems = document.querySelectorAll("section, .hero-section, footer, .service-card, .project-card");
+
+    fadeItems.forEach(item => item.classList.add("fade-in"));
+
+    const fadeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");   // fade-in when visible
+            } else {
+                entry.target.classList.remove("show"); // fade-out when not visible
+            }
+        });
+    }, { threshold: 0.15 });
+
+    fadeItems.forEach(item => fadeObserver.observe(item));
 });

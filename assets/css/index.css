@@ -59,6 +59,7 @@ h1, h2, h3 {
     font-size: 18px;
     font-weight: 700;
     color: #313131;
+    text-decoration: none;
 }
 
 .nav-links {
@@ -365,23 +366,167 @@ h1, h2, h3 {
     color: #CFCFCF;
 }
 
-/* --- Responsive --- */
-@media (max-width: 950px) {
-    .hero-content { flex-direction: column; text-align: center; }
-    .hero-image { height: 260px; }
-    .nav-links { gap: 20px; }
+/* Tambahan Responsive Navbar */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #3c3c3c;
 }
 
-@media (max-width: 700px) {
-    .header-nav { flex-wrap: wrap; padding: 15px 20px; }
-    .nav-links { flex-wrap: wrap; justify-content: center; width: 100%; margin: 10px 0; }
-    .services-grid, .portfolio-grid { grid-template-columns: repeat(2,1fr); }
-    .corp-container {
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    width: 100%;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.mobile-nav a {
+    padding: 12px;
+    display: block;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.mobile-nav a:hover {
+    background: #f5f5f5;
+    color: var(--primary-red);
+}
+
+/* ===== FADE-IN ANIMATION ===== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.service-card:nth-child(1) { transition-delay: 0.1s; }
+.service-card:nth-child(2) { transition-delay: 0.2s; }
+.service-card:nth-child(3) { transition-delay: 0.3s; }
+.service-card:nth-child(4) { transition-delay: 0.4s; }
+
+/* ===========================
+   📌 FULL RESPONSIVE + HAMBURGER MENU
+   =========================== */
+
+/* HIDE NAVIGATION ON MOBILE */
+@media (max-width: 900px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 65px;
+        right: 0;
+        width: 100%;
+        background: #fdfdf5;
+        border-bottom: 1px solid #f1f1e0;
         flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 20px 0;
+        animation: dropDown .3s ease;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* dropdown menu inside mobile nav */
+    .dropdown-menu {
+        position: relative;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        border: none;
+        background: transparent;
+    }
+
+    .dropdown-menu li a {
+        padding: 8px 0;
+        font-size: 15px;
+    }
+
+    /* hide desktop consult button */
+    .btn-consult.desktop-only {
+        display: none;
+    }
+
+    /* show hamburger button */
+    .mobile-menu-btn {
+        display: block;
+        font-size: 26px;
+        cursor: pointer;
+        color: #333;
     }
 }
 
-@media (max-width: 480px) {
-    .services-grid, .portfolio-grid { grid-template-columns: 1fr; }
-    .headline { font-size: 2em; }
+/* ANIMATION NAV */
+@keyframes dropDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
+
+/* ==============================
+   📌  HERO RESPONSIVE
+   ============================== */
+@media (max-width: 950px) {
+    .container { padding: 0 20px; }
+    .cta-social { flex-direction: column; gap: 15px; }
+    .corp-desc { max-width: 100%; }
+    .hero-content { flex-direction: column; text-align: center; gap: 50px; }
+    .hero-text { width: 100%; }
+    .hero-image { height: 260px; width: 100%; }
+    .sub-headline { font-size: 0.95em; }
+}
+
+@media (max-width: 480px) {
+    .headline { font-size: 1.9em; }
+    .sub-headline { font-size: 0.9em; }
+    .cta-button { padding: 10px 20px; font-size: 0.8em; }
+}
+
+/* ==============================
+   📌  SERVICE SECTION RESPONSIVE
+   ============================== */
+@media (max-width: 900px) {
+    .services-grid { grid-template-columns: repeat(2,1fr); }
+}
+
+@media (max-width: 500px) {
+    .services-grid { grid-template-columns: 1fr; }
+    .service-card { text-align: center; }
+}
+
+/* ==============================
+   📌  PORTFOLIO RESPONSIVE
+   ============================== */
+@media (max-width: 600px) {
+    .portfolio-track { gap: 8px; }
+    .project-card { min-width: 200px; height: 120px; }
+}
+
+/* ==============================
+   📌  CTA BOTTOM RESPONSIVE
+   ============================== */
+@media (max-width: 900px) {
+    .cta-content { flex-direction: column; gap: 20px; text-align: center; }
+}
+
+/* ==============================
+   📌  FOOTER RESPONSIVE
+   ============================== */
+@media (max-width: 700px) {
+    .corp-container { flex-direction: column; gap: 30px; text-align: center; }
+    .corp-col { width: 100%; }
+}
+
