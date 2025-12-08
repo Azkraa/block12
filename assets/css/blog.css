@@ -21,7 +21,7 @@ body {
     background-color: #ededed;
     color: var(--dark-text);
     line-height: 1.6;
-    padding-top: 90px;
+    padding-top: 60px;
 }
 
 .container {
@@ -42,101 +42,82 @@ h1, h2, h3 {
     text-align: center;
 }
 
-/* --- Image Section --- */
-.about-image {
-    max-width: 1100px; 
-    margin: 20px auto; 
-    text-align: center;
-    padding: 10px 20px;
-    background: #808080;
+/* ==============================
+   📌 BLOG LIST STYLES
+============================== */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+    margin: 40px 0 40px;
+}
+
+.blog-card {
+    background: var(--section-bg);
     border-radius: var(--main-border-radius);
-    background: linear-gradient(90deg,#9B59B6 0%,#E74C3C 100%);
-}
-
-.about-image img {
-    max-width: 100%; 
-    width: 400px;
-    height: auto;
-    padding: 20px 10px; 
-    z-index: 1;
-}
-
-.about-text {
-    margin: 0 auto;
-    padding: 70px 10px; 
-}
-
-.about-text h1 {
-    font-size: 2.5em;
-    margin-bottom: 15px;
+    overflow: hidden;
+    text-decoration: none;
     color: var(--dark-text);
-    text-align: center;
+    display: block;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.about-text p {
-    font-size: 1.3em;
-    color: var(--light-text);
-    max-width: 1050px;
-    margin: 0 auto;
-    line-height: 1.8;
-    text-align: center;
+.blog-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
-.about-vision {
-    text-align: center;
-    padding: 100px 10px 150px;
+.blog-img img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
 }
 
-.about-vision h1 {
-    font-size: 2.5em;
-    margin-bottom: 15px;
+.blog-content {
+    padding: 20px;
+}
+
+.blog-date {
+    font-size: 13px;
+    color: #888;
+    font-weight: 500;
+}
+
+.blog-title {
     color: var(--dark-text);
-    text-align: center;
+    margin: 12px 0;
+    font-size: 1.15rem;
+    line-height: 1.35;
 }
 
-.card-wrapper {
-    display: flex;
-    gap: 20px; /* Space between the cards */
-    flex-wrap: wrap; /* Allows cards to wrap to the next line on small screens */
-    justify-content: center; /* Center the cards if they don't fill the space */
-    margin: 0 auto;
-}
-
-.card-wrapper .vision-card {
-    background-color: #f8f8f8; /* Light background for the card */
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex: 1; /* Allows the cards to grow and shrink */
-    min-width: 300px; /* Ensure cards have a minimum width before wrapping */
-    cursor: default;
-}
-
-.card-wrapper .vision-card:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    transform: translateY(-5px);
-    transition: all 0.3s ease;
-    background: #006bed;
-    color: #fff;
-}
-
-.card-wrapper .vision-card h2 {
-    color: #333;
-    margin-top: 0;
-    text-align: center;
-}
-
-.card-wrapper .vision-card p {
-    font-size: 1.1em;
+.blog-excerpt {
+    font-size: 14px;
     color: var(--light-text);
-    margin: 0 auto;
-    line-height: 1.6;
-    text-align: justify;
 }
 
-.card-wrapper .vision-card:hover h2, 
-.card-wrapper .vision-card:hover p {
-    color: #fff;
+.blog-readmore {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    color: var(--primary-red);
+    transition: 0.3s;
+}
+
+.blog-readmore:hover {
+    transform: translateX(4px);
+}
+
+/* Animation Items */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* --- Footer --- */
@@ -251,20 +232,8 @@ h1, h2, h3 {
     color: var(--primary-red);
 }
 
-/* ===== FADE-IN ANIMATION ===== */
-.fade-in {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.fade-in.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.vision-card:nth-child(1) { transition-delay: 0.1s; }
-.vision-card:nth-child(2) { transition-delay: 0.2s; }
+.blog-card:nth-child(1) { transition-delay: 0.1s; }
+.blog-card:nth-child(2) { transition-delay: 0.2s; }
 
 /* ANIMATION NAV */
 @keyframes dropDown {

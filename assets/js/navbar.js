@@ -37,6 +37,15 @@ function initNavbar() {
         }
     });
 
+    // === Keep BLOG active on blog-detail pages ===
+    if (currentPath.includes("blog-") || currentPath.includes("blog")) {
+        navLinks.forEach(link => {
+            if (link.getAttribute('href').toLowerCase().includes("blog")) {
+                link.classList.add('active');
+            }
+        });
+    }
+
     if (currentPath === 'index.html' || currentPath === '') logoLink?.classList.add('active');
 
     // =========================

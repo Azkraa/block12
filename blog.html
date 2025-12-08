@@ -6,52 +6,61 @@
     <title>Block 12 Creative Agency | Full Color Branding</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/about.css"> 
     <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/blog.css">
 </head>
 <body>
     <div id="navbar-placeholder"></div>
-    <div class="about">
-        <div class="container">
-            <div class="about-image">
-                <img src="assets/images/about-image.png" alt="about-image">
-            </div>
-        </div>
 
-        <div class="container">   
-            <div class="about-text">
-                <h1>WHAT IS BLOCK 12?</h1>
-                <p>
-                    Block 12 is a creative agency based in Pontianak, Indonesia, 
-                    specializing in branding design, website development, and digital 
-                    marketing services. Our mission is to help businesses establish a 
-                    strong digital presence through innovative and effective solutions.
-                </p>
-            </div>
-        </div>
+    <!-- ====== BLOG LIST SECTION ====== -->
+<section class="blog-list">
+    <div class="container">
+        <h2 class="section-title">Latest Blogs</h2>
 
-        <div class="container">
-            <div class="about-vision">
-                <h1>OUR GOALS</h1>
-                <div class="card-wrapper">
-                    <div class="vision-card vision">
-                        <h2>Our Vision</h2>
-                        <p>
-                            To be a leading creative agency recognized for transforming 
-                            brands and driving business growth through innovative digital solutions.
-                        </p>
-                    </div>
-                    <div class="vision-card mission">
-                        <h2>Our Mission</h2>
-                        <p>
-                            To deliver measurable results for our clients by blending cutting-edge
-                            technology with compelling storytelling and user-centric design.
-                        </p>
-                    </div>
+        <div class="blog-grid">
+
+            <!-- Card 1 -->
+            <a href="blog-brand-identity-guide.html" class="blog-card fade-item">
+                <div class="blog-img">
+                    <img src="assets/blogs/brand-identity.png" alt="Brand Identity Guide">
                 </div>
-            </div>
+                <div class="blog-content">
+                    <span class="blog-date"><i class="fa-regular fa-calendar"></i> Oct 2025</span>
+                    <h3 class="blog-title">What Is Brand Identity? Full Guide for Small Businesses</h3>
+                    <p class="blog-excerpt">Learn how visual branding, strategy, and consistency build a memorable identity for your business.</p>
+                    <span class="blog-readmore">Read More →</span>
+                </div>
+            </a>
+
+            <!-- Card 2 -->
+            <a href="blog-web-importance.html" class="blog-card fade-item">
+                <div class="blog-img">
+                    <img src="assets/blogs/website-importance.png" alt="Website Importance">
+                </div>
+                <div class="blog-content">
+                    <span class="blog-date"><i class="fa-regular fa-calendar"></i> Dec 2025</span>
+                    <h3 class="blog-title">Why Your Business Needs a Professional Website in 2026</h3>
+                    <p class="blog-excerpt">Explore how modern web presence improves trust, sales, and digital visibility for small and medium brands.</p>
+                    <span class="blog-readmore">Read More →</span>
+                </div>
+            </a>
+
+            <!-- Card 3 -->
+            <a href="blog-social-branding.html" class="blog-card fade-item">
+                <div class="blog-img">
+                    <img src="assets/blogs/social-branding.png" alt="Branding on Social Media">
+                </div>
+                <div class="blog-content">
+                    <span class="blog-date"><i class="fa-regular fa-calendar"></i> Dec 2025</span>
+                    <h3 class="blog-title">How Social Media Branding Boosts Business Growth</h3>
+                    <p class="blog-excerpt">Social branding creates trust and engagement that turns followers into loyal customers.</p>
+                    <span class="blog-readmore">Read More →</span>
+                </div>
+            </a>
+
         </div>
     </div>
+</section>
 
     <footer class="corp-footer" id="contact">
         <div class="corp-container">
@@ -106,7 +115,7 @@
         </div>
     </footer>
 
-    <script src="assets/js/about.js"></script>
+    <script src="assets/js/blog.js"></script>
     <script src="assets/js/navbar.js"></script>
 
     <script>
