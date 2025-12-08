@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block 12 Creative Agency | Full Color Branding</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/about.css"> 
+    <link rel="stylesheet" href="assets/css/navbar.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+    <div class="about">
+        <div class="container">
+            <div class="about-image">
+                <img src="assets/images/about-image.png" alt="about-image">
+            </div>
+        </div>
+
+        <div class="container">   
+            <div class="about-text">
+                <h1>WHAT IS BLOCK 12?</h1>
+                <p>
+                    Block 12 is a creative agency based in Pontianak, Indonesia, 
+                    specializing in branding design, website development, and digital 
+                    marketing services. Our mission is to help businesses establish a 
+                    strong digital presence through innovative and effective solutions.
+                </p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="about-vision">
+                <h1>OUR GOALS</h1>
+                <div class="card-wrapper">
+                    <div class="vision-card vision">
+                        <h2>Our Vision</h2>
+                        <p>
+                            To be a leading creative agency recognized for transforming 
+                            brands and driving business growth through innovative digital solutions.
+                        </p>
+                    </div>
+                    <div class="vision-card mission">
+                        <h2>Our Mission</h2>
+                        <p>
+                            To deliver measurable results for our clients by blending cutting-edge
+                            technology with compelling storytelling and user-centric design.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="corp-footer" id="contact">
+        <div class="corp-container">
+        <!-- Company -->
+            <div class="corp-col logo-col">
+                <h3>Block 12 Agency</h3>
+                <p class="corp-desc">
+                    Block 12 Agency helps businesses achieve a professional digital presence through expert branding design, modern website development, and the creation of specialized digital products.
+                </p>
+                <div class="corp_socials">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Tiktok"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Menu -->
+            <div class="corp-col">
+                <h4>Menu</h4>
+                <ul class="corp-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Works</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Blogs</a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div class="corp-col">
+                <h4>Services</h4>
+                <ul class="corp-links">
+                    <li><a href="#">Branding & Identity</a></li>
+                    <li><a href="#">Website Development</a></li>
+                    <li><a href="#">UI/UX Design</a></li>
+                    <li><a href="#">Digital Marketing</a></li>
+                </ul>
+            </div>
+
+            <!-- Kontak -->
+            <div class="corp-col">
+                <h4>Kontak</h4>
+                <p>Email: <a href="mailto:hello@block12agency.com">hello@block12agency.com</a></p>
+                <p>WhatsApp: <a href="#">+62 895 – xxxx – xxxx</a></p>
+                <p>Location: Jl. Wonoyoso I No.10, Akcaya, <br> Kec. Pontianak Sel., Kota Pontianak, <br> Kalimantan Barat 78113</p>
+            </div>
+
+        </div>
+
+        <div class="corp-bottom">
+            <p>&copy; 2026 Block 12 Creative Agency — All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/about.js"></script>
+    <script src="assets/js/navbar.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('partials/navbar.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+                initNavbar(); 
+            })
+            .catch(err => console.error("Navbar load error:", err));
+        });
+    </script>
+</body>
+</html>

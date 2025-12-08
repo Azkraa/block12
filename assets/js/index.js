@@ -62,15 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
     cards.forEach(card => {
         observer.observe(card);
     });
-
-
-    // --- 3. Mobile Menu Toggle ---
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const navLinks = document.querySelector('.nav-links');
-
-    mobileMenuBtn.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
     
     // === FADE IN + FADE OUT ON SCROLL ===
     const fadeItems = document.querySelectorAll("section, .hero-section, footer, .service-card, .project-card");
