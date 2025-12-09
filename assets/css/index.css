@@ -18,8 +18,8 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ededed;
-    color: var(--dark-text);
+    background-color: #ff00b3;
+    color: #ffffff;
     line-height: 1.6;
     padding-top: 90px;
 }
@@ -38,7 +38,7 @@ h1, h2, h3 {
 .section-title {
     font-size: 2em;
     margin-bottom: 20px;
-    color: var(--dark-text);
+    color: #ffffff;
     text-align: center;
 }
 
@@ -59,12 +59,14 @@ h1, h2, h3 {
     line-height: 1.15;
 }
 
-.highlight { color: var(--primary-red); }
+.highlight { 
+    color: #ffffff; 
+}
 
 .sub-headline {
     margin: 20px 0 30px;
     font-size: 1em;
-    color: var(--light-text);
+    color: #ffffff;
 }
 
 .hero-image {
@@ -91,12 +93,14 @@ h1, h2, h3 {
 }
 
 .primary-cta {
-    background: var(--primary-red);
+    background: #000000;
     color: white;
+    transition: background-color 0.3s ease, box-shadow 0.3s;
 }
 
 .primary-cta:hover {
-    background: #c0392b;
+    background: #ffffff;
+    color: #ff00b3;
     box-shadow: 0 4px 10px rgba(231,76,60,0.4);
 }
 
@@ -221,7 +225,6 @@ h1, h2, h3 {
 /* --- Portfolio --- */
 .portfolio-section { 
     padding: 60px 0; 
-    background: #f0f0f0; 
 }
 
 .portfolio-wrapper {
