@@ -182,6 +182,10 @@
 
 /* MOBILE RESPONSIVE */
 @media (max-width: 900px) {
+    .header-nav {
+        padding: 16px 20px;
+    }
+
     .nav-links {
         display: none;
     }
@@ -196,7 +200,9 @@
     }
 
     /* disable hover dropdown on mobile */
-    .dropdown:hover .dropdown-menu { display: none; }
+    .dropdown:hover .dropdown-menu { 
+        display: none; 
+    }
 
     /* Mobile Dropdown */
     .mobile-dropdown {

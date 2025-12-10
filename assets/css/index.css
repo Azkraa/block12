@@ -37,7 +37,7 @@ h1, h2, h3 {
 
 .section-title {
     font-size: 2em;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
     color: #ffffff;
     text-align: center;
 }
@@ -69,7 +69,7 @@ h1, h2, h3 {
 
 .sub-headline {
     margin: 20px 0 30px;
-    font-size: 1em;
+    font-size: 1.2em;
     color: #ffffff;
 }
 
@@ -213,7 +213,7 @@ h1, h2, h3 {
 
 /* --- Portfolio --- */
 .portfolio-section { 
-    padding: 60px 0; 
+    padding: 60px 0 160px; 
 }
 
 .portfolio-wrapper {
@@ -257,7 +257,7 @@ h1, h2, h3 {
 /* --- Bottom CTA --- */
 .cta-bottom {
     color: #ffffff;
-    padding: 20px 0 0;
+    padding: 10px 0 10px;
     background: linear-gradient(90deg,#9B59B6 0%,#E74C3C 100%);
 }
 
@@ -269,14 +269,14 @@ h1, h2, h3 {
 
 .secondary-cta {
     background: #ffffff;
-    color: var(--primary-red);
+    color: #ff00b3;
     border: none;
     transition: background-color 0.3s ease, box-shadow 0.3s;
 }
 
 .secondary-cta:hover { 
     color: #ffffff; 
-    background: #9c1000;
+    background: #ff00b3;
 }
 
 /* --- Footer --- */
