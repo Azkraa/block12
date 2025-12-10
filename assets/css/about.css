@@ -18,8 +18,8 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ededed;
-    color: var(--dark-text);
+    background-color: #ff00b3;
+    color: #ffffff;
     line-height: 1.6;
     padding-top: 90px;
 }
@@ -28,60 +28,51 @@ body {
     width: 100%;
     max-width: 1350px;
     margin: auto;
-    padding: 20px 40px;
+    padding: 50px 40px;
 }
 
 h1, h2, h3 {
     font-weight: 800;
 }
 
-.section-title {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: var(--dark-text);
-    text-align: center;
-}
-
 /* --- Image Section --- */
-.about-image {
-    max-width: 1100px; 
-    margin: 20px auto; 
-    text-align: center;
-    padding: 10px 20px;
-    background: #808080;
-    border-radius: var(--main-border-radius);
-    background: linear-gradient(90deg,#9B59B6 0%,#E74C3C 100%);
-}
-
-.about-image img {
-    max-width: 100%; 
-    width: 400px;
-    height: auto;
-    padding: 20px 10px; 
-    z-index: 1;
+.desc-section {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .about-text {
-    margin: 0 auto;
-    padding: 70px 10px; 
-}
-
-.about-text h1 {
-    font-size: 2.5em;
-    margin-bottom: 15px;
-    color: var(--dark-text);
+    flex: 1;
     text-align: center;
 }
 
-.about-text p {
-    font-size: 1.3em;
-    color: var(--light-text);
-    max-width: 1050px;
-    margin: 0 auto;
-    line-height: 1.8;
-    text-align: center;
+.headline {
+    font-size: 3.7em;
+    line-height: 1.15;
 }
 
+.sub-headline {
+    margin: 20px 0 30px;
+    font-size: 1em;
+    color: #ffffff;
+}
+
+.about-image {
+    flex: 1;
+    height: 560px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    padding: 10px 0;
+}
+
+/* --- Vision Section --- */
 .about-vision {
     text-align: center;
     padding: 100px 10px 150px;
@@ -89,8 +80,8 @@ h1, h2, h3 {
 
 .about-vision h1 {
     font-size: 2.5em;
-    margin-bottom: 15px;
-    color: var(--dark-text);
+    margin-bottom: 100px;
+    color: #ffffff;
     text-align: center;
 }
 
@@ -103,7 +94,7 @@ h1, h2, h3 {
 }
 
 .card-wrapper .vision-card {
-    background-color: #f8f8f8; /* Light background for the card */
+    background-color: #000000; /* Light background for the card */
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -116,19 +107,18 @@ h1, h2, h3 {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transform: translateY(-5px);
     transition: all 0.3s ease;
-    background: #006bed;
-    color: #fff;
+    background: #ffffff;
 }
 
 .card-wrapper .vision-card h2 {
-    color: #333;
+    color: #ffffff;
     margin-top: 0;
     text-align: center;
 }
 
 .card-wrapper .vision-card p {
     font-size: 1.1em;
-    color: var(--light-text);
+    color: #ffffff;
     margin: 0 auto;
     line-height: 1.6;
     text-align: justify;
@@ -136,7 +126,7 @@ h1, h2, h3 {
 
 .card-wrapper .vision-card:hover h2, 
 .card-wrapper .vision-card:hover p {
-    color: #fff;
+    color: #ff00b3;
 }
 
 /* --- Footer --- */
@@ -199,7 +189,7 @@ h1, h2, h3 {
 }
 
 .corp-col a:hover {
-    color: #FFC107;
+    color: #ff00b3;
 }
 
 .corp-col p {
@@ -276,7 +266,68 @@ h1, h2, h3 {
    📌  FOOTER RESPONSIVE
    ============================== */
 @media (max-width: 700px) {
-    .corp-container { flex-direction: column; gap: 30px; text-align: center; }
-    .corp-col { width: 100%; }
-    .corp-desc { max-width: 100%; }
+    .corp-container { 
+        flex-direction: column; gap: 30px; text-align: center; 
+    }
+    .corp-col { 
+        width: 100%; 
+    }
+    .corp-desc { 
+        max-width: 100%; 
+    }
+}
+
+/* 📌 Responsive Section */
+@media (max-width: 1024px) { /* Tablet */
+    .desc-section {
+        gap: 40px;
+    }
+
+    .headline {
+        font-size: 2.2em;
+    }
+
+    .about-image {
+        height: 380px;
+    }
+}
+
+@media (max-width: 768px) { /* Mobile landscape & Small tablets */
+    .desc-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .headline {
+        font-size: 2em;
+    }
+
+    .about-image {
+        height: 350px;
+        width: 100%;
+    }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 480px) { /* Mobile portrait */
+    .container {
+        padding: 60px 20px;
+    }
+
+    .headline {
+        font-size: 1.7em;
+    }
+
+    .sub-headline {
+        font-size: 0.9em;
+    }
+
+    .about-image {
+        height: 270px;
+    }
 }

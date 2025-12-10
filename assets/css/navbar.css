@@ -22,10 +22,19 @@
 
 /* LOGO */
 .logo {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 700;
     color: #ffffff;
     text-decoration: none;
+    background: #ff00b3;
+    padding: 10px 22px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.logo:hover {
+    color: #ff00b3;
+    background: #ffffff;
 }
 
 /* NAV LINKS */
@@ -99,8 +108,8 @@
 /* CONSULT BUTTON */
 .btn-consult {
     text-decoration: none;
-    background: #ffffff;
-    color: #000000;
+    background: #ff00b3;
+    color: #ffffff;
     font-size: 14px;
     padding: 10px 22px;
     border-radius: 25px;
@@ -108,8 +117,8 @@
     transition: .3s ease;
 }
 .btn-consult:hover { 
-    background: #ff00b3; 
-    color: #ffffff;
+    background: #ffffff; 
+    color: #ff00b3;
 }
 
 /* HOVER */
@@ -130,7 +139,7 @@
     border: none;
     font-size: 24px;
     cursor: pointer;
-    color: #3c3c3c;
+    color: #ffffff;
 }
 
 /* Mobile nav container (hidden initially) */
