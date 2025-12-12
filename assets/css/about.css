@@ -307,6 +307,8 @@ h1, h2, h3 {
     .about-image {
         height: 380px;
     }
+
+
 }
 
 @media (max-width: 768px) { /* Mobile landscape & Small tablets */
@@ -321,12 +323,21 @@ h1, h2, h3 {
     }
 
     .headline {
-        font-size: 2em;
+        font-size: 28px;
     }
 
     .about-image {
         height: 350px;
         width: 100%;
+    }
+
+    .sub-headline {
+        font-size: 17px;
+    }
+
+    .about-image img {
+        width: 400px;
+        height: auto;
     }
 }
 
