@@ -348,14 +348,19 @@ h1, h2, h3 {
     }
 
     .headline {
-        font-size: 1.7em;
-    }
-
-    .sub-headline {
-        font-size: 0.9em;
+        font-size: 28px;
     }
 
     .about-image {
         height: 270px;
+    }
+
+    .sub-headline {
+        font-size: 17px;
+    }
+
+    .about-image img {
+        width: 400px;
+        height: auto;
     }
 }
