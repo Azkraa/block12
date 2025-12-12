@@ -195,6 +195,10 @@
         font-size: 26px;
     }
 
+    .mobile-nav {
+        margin-top: 14px;
+    }
+
     .btn-consult.desktop-only {
         display: none;
     }
