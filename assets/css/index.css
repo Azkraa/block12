@@ -273,10 +273,10 @@ h1, h2, h3 {
 }
 
 .partner-logos img {
-    max-width: 450px;
+    max-width: 130px;
     height: auto;
     opacity: 1;
-    margin-top: -100px;
+    margin-top: 0px;
 }
 
 /* Infinite Left Slide */
